@@ -117,7 +117,7 @@ used to log in.
 <img width="1226" height="929" alt="UAM21" src="https://github.com/user-attachments/assets/194dbd23-b292-41f7-8332-c78e5e907bfa" />
 
 <br>
-
+<br>
 
 **2. Removed from all security groups**
 <br>
@@ -128,6 +128,7 @@ Opened user properties → Member Of tab → removed from GRP_IT_Users and any o
 <img width="1226" height="928" alt="UAM22" src="https://github.com/user-attachments/assets/b600a96f-f4be-4905-9503-1e9a59455835" />
 
 <br>
+<br>
 
 **3. Moved to Disabled_Accounts OU**
 <br>
@@ -136,6 +137,7 @@ Right-clicked the user → Move → selected Disabled_Accounts OU. Keeping disab
 
 <img width="1228" height="927" alt="UAM23" src="https://github.com/user-attachments/assets/3ec899e2-ff5d-4a7b-a588-531a46532029" />
 
+<br>
 <br>
 
 **4. Added termination note to account description**
