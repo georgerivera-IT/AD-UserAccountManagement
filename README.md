@@ -91,16 +91,9 @@ Created a Group Policy Object to enforce password security standards across all 
 Created a separate GPO to protect domain accounts against brute force login attempts. After 5 failed login attempts the account is locked for 15 minutes before automatically resetting, balancing security with user convenience.
 
 <img width="1224" height="928" alt="UAM17" src="https://github.com/user-attachments/assets/caff56c0-c71a-48dc-b18b-6aa4c893c5fc" />
-
-
-| Setting | Value |
-|---|---|
-| Account lockout threshold | 5 invalid logon attempts |
-| Account lockout duration | 15 minutes |
-| Reset account lockout counter after | 15 minutes |
-
+<br>
 Linked both Group Policy Objects to Domain
-
+<br>
 <img width="617" height="536" alt="UAM20" src="https://github.com/user-attachments/assets/9bbae53a-a3bb-44bb-bdba-158593ba1426" />
 
 
@@ -116,6 +109,8 @@ used to log in.
 
 <img width="1226" height="929" alt="UAM21" src="https://github.com/user-attachments/assets/194dbd23-b292-41f7-8332-c78e5e907bfa" />
 
+<br>
+
 
 **2. Removed from all security groups**
 Opened user properties → Member Of tab → removed from GRP_IT_Users and any other group memberships. This immediately revokes access to all resources the groups controlled.
@@ -123,12 +118,14 @@ Opened user properties → Member Of tab → removed from GRP_IT_Users and any o
 
 <img width="1226" height="928" alt="UAM22" src="https://github.com/user-attachments/assets/b600a96f-f4be-4905-9503-1e9a59455835" />
 
-
+<br>
 
 **3. Moved to Disabled_Accounts OU**
 Right-clicked the user → Move → selected Disabled_Accounts OU. Keeping disabled accounts in a dedicated OU makes auditing and reviewing terminated accounts straightforward.
 
 <img width="1228" height="927" alt="UAM23" src="https://github.com/user-attachments/assets/3ec899e2-ff5d-4a7b-a588-531a46532029" />
+
+<br>
 
 **4. Added termination note to account description**
 Opened user properties → General tab → added a description noting the date and reason for disabling. This provides a clear record directly on the account for future reference.
