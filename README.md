@@ -91,9 +91,13 @@ Created a Group Policy Object to enforce password security standards across all 
 Created a separate GPO to protect domain accounts against brute force login attempts. After 5 failed login attempts the account is locked for 15 minutes before automatically resetting, balancing security with user convenience.
 
 <img width="1224" height="928" alt="UAM17" src="https://github.com/user-attachments/assets/caff56c0-c71a-48dc-b18b-6aa4c893c5fc" />
+
 <br>
+
 Linked both Group Policy Objects to Domain
+
 <br>
+
 <img width="617" height="536" alt="UAM20" src="https://github.com/user-attachments/assets/9bbae53a-a3bb-44bb-bdba-158593ba1426" />
 
 
