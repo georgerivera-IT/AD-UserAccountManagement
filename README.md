@@ -149,6 +149,3 @@ Opened user properties → General tab → added a description noting the date a
 
 ## Outcome
 Successfully demonstrated the full Active Directory user lifecycle from account creation through offboarding. Configured department-based Organizational Units, created and organized user accounts, managed security group memberships, enforced domain-wide security policies through Group Policy, and performed a complete account offboarding following security best practices.
-
-## Lessons Learned
-
