@@ -29,7 +29,6 @@ Opened Active Directory Users and Computers (ADUC) and created an organizational
 Created 5 OUs: Finance, HR, IT, Sales, and Disabled_Accounts to mirror a real company department structure. This will help manage to keep users organized, and allows implementation of Group Policies to be applied at the department level rather than domain-wide.
 
 <br>
-<br>
 
 <img width="1223" height="876" alt="UAM3" src="https://github.com/user-attachments/assets/0f78be96-fbf0-4735-8e63-1da09398f3f4" />
 
