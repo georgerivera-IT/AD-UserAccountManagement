@@ -56,11 +56,7 @@ After creating each account, opened the user properties and filled in the Organi
 
 
 ## Step 4 — Created Security Groups
-Created a Security Group for each department and assigned users to
-their appropriate group. Security groups are used to manage resource
-access across the domain — a user's group membership determines what
-shared drives, printers, and applications they can access without
-needing to configure permissions per individual user.
+Created a Security Group for each department and assigned users to their appropriate group. Security groups are used to manage resource access across the domain — a user's group membership determines what shared drives, printers, and applications they can access without needing to configure permissions per individual user.
 
 Groups created:
 
@@ -71,15 +67,14 @@ Groups created:
 | GRP_HR_Users | HR | jane.doe, lisa.davis |
 | GRP_Sales_Users | Sales | mike.brown |
 
-![Security Groups in ADUC](../screenshots/lab2-security-groups.png)
-![GRP_IT_Users Members Tab](../screenshots/lab2-group-members.png)
-
----
+<img width="1224" height="930" alt="UAM9" src="https://github.com/user-attachments/assets/1fefdcb4-5ffc-45bb-a999-db823ae86b50" />
+<img width="1222" height="928" alt="UAM10" src="https://github.com/user-attachments/assets/fae4a3dc-5a16-4c2a-9674-e33a6759f1f4" />
 
 ## Step 5 — Configured Password Policy GPO
-Created a Group Policy Object to enforce password security standards
-across all domain user accounts. Linked the GPO at the domain level
-so it applies universally to every user in corp.local.
+Created a Group Policy Object to enforce password security standards across all domain user accounts. Linked the GPO at the domain level so it applies universally to every user in corp.local.
+
+<img width="1223" height="933" alt="UAM12" src="https://github.com/user-attachments/assets/01508619-bcd0-486e-8218-651ea7bf6627" />
+
 
 | Setting | Value |
 |---|---|
@@ -89,32 +84,28 @@ so it applies universally to every user in corp.local.
 | Minimum password age | 1 day |
 | Enforce password history | 5 passwords remembered |
 
-![Password Policy GPO Settings](../screenshots/lab2-password-policy-gpo.png)
+<img width="1226" height="931" alt="UAM14" src="https://github.com/user-attachments/assets/ffb20191-6452-4927-a1a0-305bffc95f78" />
 
----
 
 ## Step 6 — Configured Account Lockout Policy GPO
-Created a separate GPO to protect domain accounts against brute
-force login attempts. After 3 failed login attempts the account
-is locked for 15 minutes before automatically resetting,
-balancing security with user convenience.
+Created a separate GPO to protect domain accounts against brute force login attempts. After 5 failed login attempts the account is locked for 15 minutes before automatically resetting, balancing security with user convenience.
+
+<img width="1224" height="928" alt="UAM17" src="https://github.com/user-attachments/assets/caff56c0-c71a-48dc-b18b-6aa4c893c5fc" />
+
 
 | Setting | Value |
 |---|---|
-| Account lockout threshold | 3 invalid logon attempts |
+| Account lockout threshold | 5 invalid logon attempts |
 | Account lockout duration | 15 minutes |
 | Reset account lockout counter after | 15 minutes |
 
-![Account Lockout Policy Settings](../screenshots/lab2-lockout-policy-gpo.png)
-![Both GPOs Linked to Domain](../screenshots/lab2-gpos-linked.png)
+Linked both Group Policy Objects to Domain
 
----
+<img width="617" height="536" alt="UAM20" src="https://github.com/user-attachments/assets/9bbae53a-a3bb-44bb-bdba-158593ba1426" />
+
 
 ## Step 7 — Account Offboarding Procedure
-Performed a complete offboarding workflow on john.smith to simulate
-a employee termination. Following security best practice, the account
-was disabled rather than deleted — preserving the audit trail and
-allowing recovery if needed.
+Performed a complete offboarding workflow on john.smith to simulate a employee termination. Following security best practice, the account was disabled rather than deleted — preserving the audit trail and allowing recovery if needed.
 
 Offboarding steps performed in order:
 
@@ -123,47 +114,29 @@ Right-clicked the user in ADUC → Disable Account. The account icon
 shows a downward arrow confirming it is disabled and cannot be
 used to log in.
 
-![Disabled Account Icon](../screenshots/lab2-account-disabled.png)
+<img width="1226" height="929" alt="UAM21" src="https://github.com/user-attachments/assets/194dbd23-b292-41f7-8332-c78e5e907bfa" />
+
 
 **2. Removed from all security groups**
-Opened user properties → Member Of tab → removed from GRP_IT_Users
-and any other group memberships. This immediately revokes access
-to all resources the groups controlled.
+Opened user properties → Member Of tab → removed from GRP_IT_Users and any other group memberships. This immediately revokes access to all resources the groups controlled.
 
-![Member Of Tab Cleared](../screenshots/lab2-member-of-cleared.png)
+
+<img width="1226" height="928" alt="UAM22" src="https://github.com/user-attachments/assets/b600a96f-f4be-4905-9503-1e9a59455835" />
+
+
 
 **3. Moved to Disabled_Accounts OU**
-Right-clicked the user → Move → selected Disabled_Accounts OU.
-Keeping disabled accounts in a dedicated OU makes auditing and
-reviewing terminated accounts straightforward.
+Right-clicked the user → Move → selected Disabled_Accounts OU. Keeping disabled accounts in a dedicated OU makes auditing and reviewing terminated accounts straightforward.
 
-![User Moved to Disabled_Accounts](../screenshots/lab2-disabled-accounts-ou.png)
+<img width="1228" height="927" alt="UAM23" src="https://github.com/user-attachments/assets/3ec899e2-ff5d-4a7b-a588-531a46532029" />
 
 **4. Added termination note to account description**
-Opened user properties → General tab → added a description noting
-the date and reason for disabling. This provides a clear record
-directly on the account for future reference.
+Opened user properties → General tab → added a description noting the date and reason for disabling. This provides a clear record directly on the account for future reference.
 
-![Termination Note in Description](../screenshots/lab2-termination-description.png)
-
----
+<img width="1226" height="929" alt="UAM24" src="https://github.com/user-attachments/assets/fbc7c8bc-56b7-4ede-aa89-f26a80d39c08" />
 
 ## Outcome
-Successfully demonstrated the full Active Directory user lifecycle
-from account creation through offboarding. Configured department-based
-Organizational Units, created and organized user accounts, managed
-security group memberships, enforced domain-wide security policies
-through Group Policy, and performed a complete account offboarding
-following security best practices.
+Successfully demonstrated the full Active Directory user lifecycle from account creation through offboarding. Configured department-based Organizational Units, created and organized user accounts, managed security group memberships, enforced domain-wide security policies through Group Policy, and performed a complete account offboarding following security best practices.
 
 ## Lessons Learned
-- Organizing users into OUs from the start makes Group Policy
-  targeting and user management significantly easier at scale
-- Security groups should be used for resource access rather than
-  assigning permissions directly to users — this simplifies
-  access management when users change roles
-- Disabling accounts instead of deleting them preserves the audit
-  trail which is critical for security reviews and compliance
-- Linking GPOs at the domain level applies them universally —
-  department-specific policies should be linked at the OU level
-  instead for more granular control
+
