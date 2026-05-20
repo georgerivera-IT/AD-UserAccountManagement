@@ -93,6 +93,7 @@ Created a separate GPO to protect domain accounts against brute force login atte
 <img width="1224" height="928" alt="UAM17" src="https://github.com/user-attachments/assets/caff56c0-c71a-48dc-b18b-6aa4c893c5fc" />
 
 <br>
+<br>
 
 Linked both Group Policy Objects to Domain
 
