@@ -108,6 +108,8 @@ Performed a complete offboarding workflow on john.smith to simulate a employee t
 Offboarding steps performed in order:
 
 **1. Disabled the account**
+<br>
+
 Right-clicked the user in ADUC → Disable Account. The account icon
 shows a downward arrow confirming it is disabled and cannot be
 used to log in.
@@ -118,6 +120,8 @@ used to log in.
 
 
 **2. Removed from all security groups**
+<br>
+
 Opened user properties → Member Of tab → removed from GRP_IT_Users and any other group memberships. This immediately revokes access to all resources the groups controlled.
 
 
@@ -126,6 +130,8 @@ Opened user properties → Member Of tab → removed from GRP_IT_Users and any o
 <br>
 
 **3. Moved to Disabled_Accounts OU**
+<br>
+
 Right-clicked the user → Move → selected Disabled_Accounts OU. Keeping disabled accounts in a dedicated OU makes auditing and reviewing terminated accounts straightforward.
 
 <img width="1228" height="927" alt="UAM23" src="https://github.com/user-attachments/assets/3ec899e2-ff5d-4a7b-a588-531a46532029" />
@@ -133,6 +139,8 @@ Right-clicked the user → Move → selected Disabled_Accounts OU. Keeping disab
 <br>
 
 **4. Added termination note to account description**
+<br>
+
 Opened user properties → General tab → added a description noting the date and reason for disabling. This provides a clear record directly on the account for future reference.
 
 <img width="1226" height="929" alt="UAM24" src="https://github.com/user-attachments/assets/fbc7c8bc-56b7-4ede-aa89-f26a80d39c08" />
